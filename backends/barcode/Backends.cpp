@@ -43,40 +43,20 @@ namespace glabels
 
 		Backends::Backends()
 		{
-			registerStyle( "code39", "", tr("Code 39"),
-			               true, true, true, true, "1234567890", true, 10 );
-
-			registerStyle( "code39ext", "", tr("Code 39 Extended"),
-			               true, true, true, true, "1234567890", true, 10 );
-
-			registerStyle( "upc-a", "", tr("UPC-A"),
-			               true, true, true, false, "12345678901", false, 11 );
-
-			registerStyle( "ean-13", "", tr("EAN-13"),
-			               true, true, true, false, "123456789012", false, 12 );
-
-			registerStyle( "postnet", "", tr("POSTNET (any)"),
-			               false, false, true, false, "12345-6789-12", false, 11 );
-
-			registerStyle( "postnet-5", "", tr("POSTNET-5 (ZIP only)"),
-			               false, false, true, false, "12345", false, 5 );
-
-			registerStyle( "postnet-9", "", tr("POSTNET-9 (ZIP+4)"),
-			               false, false, true, false, "12345-6789", false, 9 );
-
-			registerStyle( "postnet-11", "", tr("POSTNET-11 (DPBC)"),
-			               false, false, true, false, "12345-6789-12", false, 11 );
-
-			registerStyle( "cepnet", "", tr("CEPNET"),
-			               false, false, true, false, "12345-678", false, 8 );
-
-			registerStyle( "onecode", "", tr("USPS Intelligent Mail"),
-			               false, false, true, false, "12345678901234567890", false, 20 );
-
-			registerStyle( "datamatrix", "", tr("IEC16022 (DataMatrix)"),
-			               false, false, true, false, "1234567890AB", false, 12 );
+			registerStyle( "code39", "", tr("Code 39"), true, true, true, true, "1234567890", true, 10 );
+			registerStyle( "code39ext", "", tr("Code 39 Extended"), true, true, true, true, "1234567890", true, 10 );
+			registerStyle( "upc-a", "", tr("UPC-A"), true, true, true, false, "12345678901", false, 11 );
+			registerStyle( "ean-13", "", tr("EAN-13"), true, true, true, false, "123456789012", false, 12 );
+			registerStyle( "postnet", "", tr("POSTNET (any)"), false, false, true, false, "12345-6789-12", false, 11 );
+			registerStyle( "postnet-5", "", tr("POSTNET-5 (ZIP only)"), false, false, true, false, "12345", false, 5 );
+			registerStyle( "postnet-9", "", tr("POSTNET-9 (ZIP+4)"), false, false, true, false, "12345-6789", false, 9 );
+			registerStyle( "postnet-11", "", tr("POSTNET-11 (DPBC)"), false, false, true, false, "12345-6789-12", false, 11 );
+			registerStyle( "cepnet", "", tr("CEPNET"), false, false, true, false, "12345-678", false, 8 );
+			registerStyle( "onecode", "", tr("USPS Intelligent Mail"), false, false, true, false, "12345678901234567890", false, 20 );
+			registerStyle( "datamatrix", "", tr("IEC16022 (DataMatrix)"), false, false, true, false, "1234567890AB", false, 12 );
 
 #if HAVE_GNU_BARCODE
+
 			//
 			// GNU Barcode backend
 			//
@@ -108,59 +88,36 @@ namespace glabels
 			glbarcode::Factory::registerType( "gnu-barcode::pls",      GnuBarcode::Pls::create );
 			glbarcode::Factory::registerType( "gnu-barcode::code93",   GnuBarcode::Code93::create );
 
-			registerStyle( "ean", "gnu-barcode", tr("EAN (any)"),
-			               true, true, true, false, "000000000000 00000", false, 17 );
-			registerStyle( "ean-8", "gnu-barcode", tr("EAN-8"),
-			               true, true, true, false, "0000000", false, 7 );
-			registerStyle( "ean-8+2", "gnu-barcode", tr("EAN-8+2"),
-			               true, true, true, false, "0000000 00", false, 9 );
-			registerStyle( "ean-8+5", "gnu-barcode", tr("EAN-8+5"),
-			               true, true, true, false, "0000000 00000", false, 12 );
-			registerStyle( "ean-13", "gnu-barcode", tr("EAN-13"),
-			               true, true, true, false, "000000000000", false, 12 );
-			registerStyle( "ean-13+2", "gnu-barcode", tr("EAN-13+2"),
-			               true, true, true, false, "000000000000 00", false, 14 );
-			registerStyle( "ean-13+5", "gnu-barcode", tr("EAN-13+5"),
-			               true, true, true, false, "000000000000 00000", false, 17 );
-			registerStyle( "upc", "gnu-barcode", tr("UPC (UPC-A or UPC-E)"),
-			               true, true, true, false, "00000000000 00000", false, 16 );
-			registerStyle( "upc-a", "gnu-barcode", tr("UPC-A"),
-			               true, true, true, false, "00000000000", false, 11 );
-			registerStyle( "upc-a+2", "gnu-barcode", tr("UPC-A +2"),
-			               true, true, true, false, "00000000000 00", false, 13 );
-			registerStyle( "upc-a+5", "gnu-barcode", tr("UPC-A +5"),
-			               true, true, true, false, "00000000000 00000", false, 16 );
-			registerStyle( "upc-e", "gnu-barcode", tr("UPC-E"),
-			               true, true, true, false, "000000", false, 6 );
-			registerStyle( "upc-e+2", "gnu-barcode", tr("UPC-E +2"),
-			               true, true, true, false, "000000 00", false, 8 );
-			registerStyle( "upc-e+5", "gnu-barcode", tr("UPC-E +5"),
-			               true, true, true, false, "000000 00000", false, 11 );
-			registerStyle( "isbn", "gnu-barcode", tr("ISBN"),
-			               true, true, true, true, "0-00000-000-0", false, 10 );
-			registerStyle( "isbn+5", "gnu-barcode", tr("ISBN +5"),
-			               true, true, true, true, "0-00000-000-0 00000", false, 15 );
-			registerStyle( "code39", "gnu-barcode", tr("Code 39"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "code128", "gnu-barcode", tr("Code 128"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "code128c", "gnu-barcode", tr("Code 128C"),
-			               true, true, true, false, "0000000000", true, 10 );
-			registerStyle( "code128b", "gnu-barcode", tr("Code 128B"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "i25", "gnu-barcode", tr("Interleaved 2 of 5"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "cbr", "gnu-barcode", tr("Codabar"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "msi", "gnu-barcode", tr("MSI"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "pls", "gnu-barcode", tr("Plessey"),
-			               true, true, true, true, "0000000000", true, 10 );
-			registerStyle( "code93", "gnu-barcode", tr("Code 93"),
-			               true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "ean", "gnu-barcode", tr("EAN (any)"), true, true, true, false, "000000000000 00000", false, 17 );
+			registerStyle( "ean-8", "gnu-barcode", tr("EAN-8"), true, true, true, false, "0000000", false, 7 );
+			registerStyle( "ean-8+2", "gnu-barcode", tr("EAN-8+2"), true, true, true, false, "0000000 00", false, 9 );
+			registerStyle( "ean-8+5", "gnu-barcode", tr("EAN-8+5"), true, true, true, false, "0000000 00000", false, 12 );
+			registerStyle( "ean-13", "gnu-barcode", tr("EAN-13"), true, true, true, false, "000000000000", false, 12 );
+			registerStyle( "ean-13+2", "gnu-barcode", tr("EAN-13+2"), true, true, true, false, "000000000000 00", false, 14 );
+			registerStyle( "ean-13+5", "gnu-barcode", tr("EAN-13+5"), true, true, true, false, "000000000000 00000", false, 17 );
+			registerStyle( "upc", "gnu-barcode", tr("UPC (UPC-A or UPC-E)"), true, true, true, false, "00000000000 00000", false, 16 );
+			registerStyle( "upc-a", "gnu-barcode", tr("UPC-A"), true, true, true, false, "00000000000", false, 11 );
+			registerStyle( "upc-a+2", "gnu-barcode", tr("UPC-A +2"), true, true, true, false, "00000000000 00", false, 13 );
+			registerStyle( "upc-a+5", "gnu-barcode", tr("UPC-A +5"), true, true, true, false, "00000000000 00000", false, 16 );
+			registerStyle( "upc-e", "gnu-barcode", tr("UPC-E"), true, true, true, false, "000000", false, 6 );
+			registerStyle( "upc-e+2", "gnu-barcode", tr("UPC-E +2"), true, true, true, false, "000000 00", false, 8 );
+			registerStyle( "upc-e+5", "gnu-barcode", tr("UPC-E +5"), true, true, true, false, "000000 00000", false, 11 );
+			registerStyle( "isbn", "gnu-barcode", tr("ISBN"), true, true, true, true, "0-00000-000-0", false, 10 );
+			registerStyle( "isbn+5", "gnu-barcode", tr("ISBN +5"), true, true, true, true, "0-00000-000-0 00000", false, 15 );
+			registerStyle( "code39", "gnu-barcode", tr("Code 39"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "code128", "gnu-barcode", tr("Code 128"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "code128c", "gnu-barcode", tr("Code 128C"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "code128b", "gnu-barcode", tr("Code 128B"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "i25", "gnu-barcode", tr("Interleaved 2 of 5"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "cbr", "gnu-barcode", tr("Codabar"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "msi", "gnu-barcode", tr("MSI"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "pls", "gnu-barcode", tr("Plessey"), true, true, true, true, "0000000000", true, 10 );
+			registerStyle( "code93", "gnu-barcode", tr("Code 93"), true, true, true, false, "0000000000", true, 10 );
+
 #endif // HAVE_GNU_BARCODE
 
 #if HAVE_QRENCODE
+
 			//
 			// Libqrencode backend
 			//
@@ -246,206 +203,74 @@ namespace glabels
 			glbarcode::Factory::registerType( "zint::usps",      Zint::Usps::create );
 			glbarcode::Factory::registerType( "zint::pls",       Zint::Pls::create );
 
-			registerStyle( "ausp", "zint", tr("Australia Post Standard"),
-			               false, false, true, false, "12345678901234567890123", true, 23 );
+			registerStyle( "ausp", "zint", tr("Australia Post Standard"), false, false, true, false, "12345678901234567890123", true, 23 );
+			registerStyle( "ausrp", "zint", tr("Australia Post Reply Paid"), false, false, true, false, "12345678", true, 8 );
+			registerStyle( "ausrt", "zint", tr("Australia Post Route Code"), false, false, true, false, "12345678", true, 8 );
+			registerStyle( "ausrd", "zint", tr("Australia Post Redirect"), false, false, true, false, "12345678", true, 8 );
+			registerStyle( "aztec", "zint", tr("Aztec Code"), false, false, true, false, "1234567890", true, 10 );
+			registerStyle( "azrun", "zint", tr("Aztec Rune"), false, false, true, false, "255", true, 3 );
+			registerStyle( "cbr", "zint", tr("Codabar"), true, true, true, false, "ABCDABCDAB", true, 10 );
+			registerStyle( "code1", "zint", tr("Code One"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "code11", "zint", tr("Code 11"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "c16k", "zint", tr("Code 16K"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "c25m", "zint", tr("Code 2 of 5 Matrix"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "c25i", "zint", tr("Code 2 of 5 IATA"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "c25dl", "zint", tr("Code 2 of 5 Data Logic"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "code32", "zint", tr("Code 32 (Italian Pharmacode)"), true, true, true, false, "12345678", true, 8 );
+			registerStyle( "code39", "zint", tr("Code 39"), true, true, false, false, "0000000000", true, 10 );
+			registerStyle( "code39e", "zint", tr("Code 39 Extended"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "code49", "zint", tr("Code 49"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "code93", "zint", tr("Code 93"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "code128", "zint", tr("Code 128"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "code128b", "zint", tr("Code 128 (Mode C suppression)"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "daft", "zint", tr("DAFT Code"), false, false, false, false, "DAFTDAFTDAFTDAFT", true, 16 );
+			registerStyle( "dmtx", "zint", tr("Data Matrix"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "dpl", "zint", tr("Deutsche Post Leitcode"), true, true, true, false, "1234567890123", true, 13 );
+			registerStyle( "dpi", "zint", tr("Deutsche Post Identcode"), true, true, true, false, "12345678901", true, 11 );
+			registerStyle( "kix", "zint", tr("Dutch Post KIX Code"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "ean", "zint", tr("EAN"), true, true, true, false, "1234567890123", false, 13 );
+			registerStyle( "gmtx", "zint", tr("Grid Matrix"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "gs1-128", "zint", tr("GS1-128"), true, true, true, false, "[01]12345678901234", false, 18 );
+			registerStyle( "rss14", "zint", tr("GS1 DataBar-14"), true, true, true, false, "1234567890123", true, 13 );
+			registerStyle( "rssltd", "zint", "GS1 DataBar-14 Limited", true, true, true, false, "1234567890123", true, 13 );
+			registerStyle( "rssexp", "zint", "GS1 DataBar Extended", true, true, true, false, "[01]12345678901234", false, 18 );
+			registerStyle( "rsss", "zint", tr("GS1 DataBar-14 Stacked"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "rssso", "zint", tr("GS1 DataBar-14 Stacked Omni."), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "rssse", "zint", tr("GS1 DataBar Extended Stacked"), false, false, true, false, "[01]12345678901234", false, 18 );
+			registerStyle( "hibc128", "zint", tr("HIBC Code 128"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "hibc39", "zint", tr("HIBC Code 39"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "hibcdm", "zint", tr("HIBC Data Matrix"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "hibcqr", "zint", tr("HIBC QR Code"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "hibcpdf", "zint", tr("HIBC PDF417"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "hibcmpdf", "zint", tr("HIBC Micro PDF417"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "hibcaz", "zint", tr("HIBC Aztec Code"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "i25", "zint", tr("Interleaved 2 of 5"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "isbn", "zint", tr("ISBN"), true, true, true, false, "123456789", false, 9 );
+			registerStyle( "itf14", "zint", tr("ITF-14"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "japan", "zint", tr("Japanese Postal"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "korea", "zint", tr("Korean Postal"), true, true, true, false, "123456", false, 6 );
+			registerStyle( "logm", "zint", tr("LOGMARS"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "maxi", "zint", tr("Maxicode"), false, false, false, false, "0000000000", true, 10 );
+			registerStyle( "mpdf", "zint", tr("Micro PDF417"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "mqr", "zint", tr("Micro QR Code"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "msi", "zint", tr("MSI Plessey"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "nve", "zint", tr("NVE-18"), true, true, true, false, "12345678901234567", false, 17 );
+			registerStyle( "pdf", "zint", tr("PDF417"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "pdft", "zint", tr("PDF417 Truncated"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "plan", "zint", tr("PLANET"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "postnet", "zint", tr("PostNet"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "pharma", "zint", tr("Pharmacode"), false, false, true, false, "123456", false, 6 );
+			registerStyle( "pharma2", "zint", tr("Pharmacode 2-track"), false, false, true, false, "12345678", false, 8 );
+			registerStyle( "pzn", "zint", tr("Pharmazentral Nummer (PZN)"), true, true, true, false, "123456", false, 6 );
+			registerStyle( "qr", "zint", tr("QR Code"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "rm4", "zint", tr("Royal Mail 4-State"), false, false, true, false, "0000000000", true, 10 );
+			registerStyle( "tele", "zint", tr("Telepen"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "telex", "zint", tr("Telepen Numeric"), true, true, true, false, "0000000000", true, 10 );
+			registerStyle( "upc-a", "zint", tr("UPC-A"), true, true, true, false, "12345678901", false, 11 );
+			registerStyle( "upc-e", "zint", tr("UPC-E"), true, true, true, false, "1234567", false, 7 );
+			registerStyle( "usps", "zint", tr("USPS One Code"), false, false, true, false, "12345678901234567890", true, 20 );
+			registerStyle( "pls", "zint", tr("UK Plessey"), true, true, true, false, "0000000000", true, 10 );
 
-			registerStyle( "ausrp", "zint", tr("Australia Post Reply Paid"),
-			               false, false, true, false, "12345678", true, 8 );
-
-			registerStyle( "ausrt", "zint", tr("Australia Post Route Code"),
-			               false, false, true, false, "12345678", true, 8 );
-
-			registerStyle( "ausrd", "zint", tr("Australia Post Redirect"),
-			               false, false, true, false, "12345678", true, 8 );
-
-			registerStyle( "aztec", "zint", tr("Aztec Code"),
-			               false, false, true, false, "1234567890", true, 10 );
-          
-			registerStyle( "azrun", "zint", tr("Aztec Rune"),
-			               false, false, true, false, "255", true, 3 );
-
-			registerStyle( "cbr", "zint", tr("Codabar"),
-			               true, true, true, false, "ABCDABCDAB", true, 10 );
-
-			registerStyle( "code1", "zint", tr("Code One"), 
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "code11", "zint", tr("Code 11"),
-			               true, true, true, false, "0000000000", true, 10 );
-          
-			registerStyle( "c16k", "zint", tr("Code 16K"),
-			               false, false, true, false, "0000000000", true, 10 );
-          
-			registerStyle( "c25m", "zint", tr("Code 2 of 5 Matrix"), 
-			               true, true, true, false, "0000000000", true, 10 );
-          
-			registerStyle( "c25i", "zint", tr("Code 2 of 5 IATA"), 
-			               true, true, true, false, "0000000000", true, 10 );
-          
-			registerStyle( "c25dl", "zint", tr("Code 2 of 5 Data Logic"), 
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "code32", "zint", tr("Code 32 (Italian Pharmacode)"), 
-			               true, true, true, false, "12345678", true, 8 );
-
-			registerStyle( "code39", "zint", tr("Code 39"),
-			               true, true, false, false, "0000000000", true, 10 );
-          
-			registerStyle( "code39e", "zint", tr("Code 39 Extended"), 
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "code49", "zint", tr("Code 49"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "code93", "zint", tr("Code 93"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "code128", "zint", tr("Code 128"),
-			               true, true, true, false, "0000000000", true, 10 );
-          
-			registerStyle( "code128b", "zint", tr("Code 128 (Mode C suppression)"),
-			               true, true, true, false, "0000000000", true, 10 );
-          
-			registerStyle( "daft", "zint", tr("DAFT Code"),
-			               false, false, false, false, "DAFTDAFTDAFTDAFT", true, 16 );
-
-			registerStyle( "dmtx", "zint", tr("Data Matrix"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "dpl", "zint", tr("Deutsche Post Leitcode"),
-			               true, true, true, false, "1234567890123", true, 13 );
-          
-			registerStyle( "dpi", "zint", tr("Deutsche Post Identcode"),
-			               true, true, true, false, "12345678901", true, 11 );
-          
-			registerStyle( "kix", "zint", tr("Dutch Post KIX Code"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "ean", "zint", tr("EAN"),
-			               true, true, true, false, "1234567890123", false, 13 );
-
-			registerStyle( "gmtx", "zint", tr("Grid Matrix"), 
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "gs1-128", "zint", tr("GS1-128"),
-			               true, true, true, false, "[01]12345678901234", false, 18 );
-
-			registerStyle( "rss14", "zint", tr("GS1 DataBar-14"),
-			               true, true, true, false, "1234567890123", true, 13 );
-          
-			registerStyle( "rssltd", "zint", "GS1 DataBar-14 Limited", 
-			               true, true, true, false, "1234567890123", true, 13 );
-          
-			registerStyle( "rssexp", "zint", "GS1 DataBar Extended", 
-			               true, true, true, false, "[01]12345678901234", false, 18 );
-          
-			registerStyle( "rsss", "zint", tr("GS1 DataBar-14 Stacked"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "rssso", "zint", tr("GS1 DataBar-14 Stacked Omni."),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "rssse", "zint", tr("GS1 DataBar Extended Stacked"),
-			               false, false, true, false, "[01]12345678901234", false, 18 );
-
-			registerStyle( "hibc128", "zint", tr("HIBC Code 128"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "hibc39", "zint", tr("HIBC Code 39"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "hibcdm", "zint", tr("HIBC Data Matrix"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "hibcqr", "zint", tr("HIBC QR Code"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "hibcpdf", "zint", tr("HIBC PDF417"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "hibcmpdf", "zint", tr("HIBC Micro PDF417"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "hibcaz", "zint", tr("HIBC Aztec Code"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "i25", "zint", tr("Interleaved 2 of 5"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "isbn", "zint", tr("ISBN"),
-			               true, true, true, false, "123456789", false, 9 );
-
-			registerStyle( "itf14", "zint", tr("ITF-14"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "japan", "zint", tr("Japanese Postal"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "korea", "zint", tr("Korean Postal"),
-			               true, true, true, false, "123456", false, 6 );
-
-			registerStyle( "logm", "zint", tr("LOGMARS"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "maxi", "zint", tr("Maxicode"),
-			               false, false, false, false, "0000000000", true, 10 );
-
-			registerStyle( "mpdf", "zint", tr("Micro PDF417"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "mqr", "zint", tr("Micro QR Code"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "msi", "zint", tr("MSI Plessey"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "nve", "zint", tr("NVE-18"),
-			               true, true, true, false, "12345678901234567", false, 17 );
-
-			registerStyle( "pdf", "zint", tr("PDF417"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "pdft", "zint", tr("PDF417 Truncated"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "plan", "zint", tr("PLANET"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "postnet", "zint", tr("PostNet"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "pharma", "zint", tr("Pharmacode"),
-			               false, false, true, false, "123456", false, 6 );
-
-			registerStyle( "pharma2", "zint", tr("Pharmacode 2-track"),
-			               false, false, true, false, "12345678", false, 8 );
-
-			registerStyle( "pzn", "zint", tr("Pharmazentral Nummer (PZN)"),
-			               true, true, true, false, "123456", false, 6 );
-
-			registerStyle( "qr", "zint", tr("QR Code"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "rm4", "zint", tr("Royal Mail 4-State"),
-			               false, false, true, false, "0000000000", true, 10 );
-
-			registerStyle( "tele", "zint", tr("Telepen"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "telex", "zint", tr("Telepen Numeric"),
-			               true, true, true, false, "0000000000", true, 10 );
-
-			registerStyle( "upc-a", "zint", tr("UPC-A"), 
-			               true, true, true, false, "12345678901", false, 11 );
-          
-			registerStyle( "upc-e", "zint", tr("UPC-E"), 
-			               true, true, true, false, "1234567", false, 7 );
-          
-			registerStyle( "usps", "zint", tr("USPS One Code"),
-			               false, false, true, false, "12345678901234567890", true, 20 );
-
-			registerStyle( "pls", "zint", tr("UK Plessey"),
-			               true, true, true, false, "0000000000", true, 10 );
 #endif // HAVE_ZINT
 
 		}

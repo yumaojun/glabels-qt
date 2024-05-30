@@ -2029,7 +2029,7 @@
     </message>
     <message>
         <source>Code 39 Extended</source>
-        <translation type="unfinished">Code 39</translation>
+        <translation type="unfinished">Code 39 Extended</translation>
     </message>
     <message>
         <source>UPC-A</source>
@@ -2061,7 +2061,7 @@
     </message>
     <message>
         <source>USPS Intelligent Mail</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">USPS Intelligent Mail</translation>
     </message>
     <message>
         <source>IEC16022 (DataMatrix)</source>
@@ -2077,19 +2077,19 @@
     </message>
     <message>
         <source>EAN-8+2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">EAN-8+2</translation>
     </message>
     <message>
         <source>EAN-8+5</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">EAN-8+5</translation>
     </message>
     <message>
         <source>EAN-13+2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">EAN-13+2</translation>
     </message>
     <message>
         <source>EAN-13+5</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">EAN-13+5</translation>
     </message>
     <message>
         <source>UPC (UPC-A or UPC-E)</source>
@@ -2161,69 +2161,59 @@
     </message>
     <message>
         <source>Australia Post Reply Paid</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Australia Post Reply Paid</translation>
     </message>
     <message>
         <source>Australia Post Route Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Australia Post Route Code</translation>
     </message>
     <message>
         <source>Australia Post Redirect</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Australia Post Redirect</translation>
     </message>
     <message>
         <source>Aztec Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Aztec Code</translation>
     </message>
     <message>
         <source>Aztec Rune</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Aztec Rune</translation>
     </message>
     <message>
         <source>Code One</source>
-        <translation type="unfinished">Code 39</translation>
+        <translation type="unfinished">Code One</translation>
     </message>
     <message>
         <source>Code 11</source>
-        <translation type="unfinished">Code 128</translation>
+        <translation type="unfinished">Code 11</translation>
     </message>
     <message>
         <source>Code 16K</source>
-        <translation type="unfinished">Code 128</translation>
+        <translation type="unfinished">Code 16K</translation>
     </message>
     <message>
         <source>Code 2 of 5 Matrix</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Code 2 of 5 Matrix</translation>
     </message>
     <message>
         <source>Code 2 of 5 IATA</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Code 2 of 5 IATA</translation>
     </message>
     <message>
         <source>Code 2 of 5 Data Logic</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Code 2 of 5 Data Logic</translation>
     </message>
     <message>
         <source>Code 32 (Italian Pharmacode)</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Code 32 (Italian Pharmacode)</translation>
     </message>
     <message>
         <source>Code 49</source>
-        <translation type="unfinished">Code 39</translation>
+        <translation type="unfinished">Code 49</translation>
     </message>
     <message>
         <source>DAFT Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">DAFT Code</translation>
     </message>
     <message>
         <source>Data Matrix</source>
@@ -2231,18 +2221,15 @@
     </message>
     <message>
         <source>Deutsche Post Leitcode</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Deutsche Post Leitcode</translation>
     </message>
     <message>
         <source>Deutsche Post Identcode</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Deutsche Post Identcode</translation>
     </message>
     <message>
         <source>Dutch Post KIX Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Dutch Post KIX Code</translation>
     </message>
     <message>
         <source>EAN</source>
@@ -2250,8 +2237,7 @@
     </message>
     <message>
         <source>Grid Matrix</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Grid Matrix</translation>
     </message>
     <message>
         <source>GS1-128</source>
@@ -2259,31 +2245,27 @@
     </message>
     <message>
         <source>GS1 DataBar-14</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">GS1 DataBar-14</translation>
     </message>
     <message>
         <source>GS1 DataBar-14 Stacked</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">GS1 DataBar-14 Stacked</translation>
     </message>
     <message>
         <source>GS1 DataBar-14 Stacked Omni.</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">GS1 DataBar-14 Stacked Omni.</translation>
     </message>
     <message>
         <source>GS1 DataBar Extended Stacked</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">GS1 DataBar Extended Stacked</translation>
     </message>
     <message>
         <source>HIBC Code 128</source>
-        <translation type="unfinished">Code 128</translation>
+        <translation type="unfinished">HIBC Code 128</translation>
     </message>
     <message>
         <source>HIBC Code 39</source>
-        <translation type="unfinished">Code 39</translation>
+        <translation type="unfinished">HIBC Code 39</translation>
     </message>
     <message>
         <source>HIBC Data Matrix</source>
@@ -2295,23 +2277,19 @@
     </message>
     <message>
         <source>HIBC PDF417</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">HIBC PDF417</translation>
     </message>
     <message>
         <source>HIBC Micro PDF417</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">HIBC Micro PDF417</translation>
     </message>
     <message>
         <source>HIBC Aztec Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">HIBC Aztec Code</translation>
     </message>
     <message>
         <source>ITF-14</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">ITF-14</translation>
     </message>
     <message>
         <source>Japanese Postal</source>
@@ -2319,46 +2297,39 @@
     </message>
     <message>
         <source>Korean Postal</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">韩国邮政</translation>
     </message>
     <message>
         <source>LOGMARS</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">LOGMARS</translation>
     </message>
     <message>
         <source>Maxicode</source>
-        <translation type="unfinished">条形码</translation>
+        <translation type="unfinished">Maxicode</translation>
     </message>
     <message>
         <source>Micro PDF417</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Micro PDF417</translation>
     </message>
     <message>
         <source>Micro QR Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Micro QR Code</translation>
     </message>
     <message>
         <source>MSI Plessey</source>
-        <translation type="unfinished">Plessey</translation>
+        <translation type="unfinished">MSI Plessey</translation>
     </message>
     <message>
         <source>NVE-18</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">NVE-18</translation>
     </message>
     <message>
         <source>PDF417</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">PDF417</translation>
     </message>
     <message>
         <source>PDF417 Truncated</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">PDF417 Truncated</translation>
     </message>
     <message>
         <source>PLANET</source>
@@ -2366,56 +2337,51 @@
     </message>
     <message>
         <source>PostNet</source>
-        <translation type="unfinished">粘贴</translation>
+        <translation type="unfinished">PostNet</translation>
     </message>
     <message>
         <source>Pharmacode</source>
-        <translation type="unfinished">条形码</translation>
+        <translation type="unfinished">Pharmacode</translation>
     </message>
     <message>
         <source>Pharmacode 2-track</source>
-        <translation type="unfinished">空条形码数据</translation>
+        <translation type="unfinished">Pharmacode 2-track</translation>
     </message>
     <message>
         <source>Pharmazentral Nummer (PZN)</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Pharmazentral Nummer (PZN)</translation>
     </message>
     <message>
         <source>QR Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">QR Code</translation>
     </message>
     <message>
         <source>Royal Mail 4-State</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Royal Mail 4-State</translation>
     </message>
     <message>
         <source>Telepen</source>
-        <translation type="unfinished">删除</translation>
+        <translation type="unfinished">Telepen</translation>
     </message>
     <message>
         <source>Telepen Numeric</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">Telepen Numeric</translation>
     </message>
     <message>
         <source>USPS One Code</source>
-        <translation type="unfinished">
-            </translation>
+        <translation type="unfinished">USPS One Code</translation>
     </message>
     <message>
         <source>UK Plessey</source>
-        <translation type="unfinished">Plessey</translation>
+        <translation type="unfinished">UK Plessey</translation>
     </message>
     <message>
         <source>Australia Post Standard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Australia Post Standard</translation>
     </message>
     <message>
         <source>Code 128 (Mode C suppression)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Code 128 (Mode C suppression)</translation>
     </message>
 </context>
 <context>
@@ -2429,7 +2395,7 @@
     <name>glabels::model::ModelBarcodeObject</name>
     <message>
         <source>No barcode data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">无数据</translation>
     </message>
     <message>
         <source>Invalid barcode data</source>
@@ -2447,7 +2413,7 @@
     <name>main</name>
     <message>
         <source>gLabels Label Designer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">标签设计器</translation>
     </message>
     <message>
         <source>gLabels project files to open, optionally.</source>

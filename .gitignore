@@ -1,5 +1,6 @@
 # My cmake build directory
 /build
+/out
 
 # Compiled Object files
 *.slo
@@ -37,3 +38,4 @@ TEST-DATA
 SAV*
 OLD*
 
+/.vs
