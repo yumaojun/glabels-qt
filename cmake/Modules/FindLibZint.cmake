@@ -11,10 +11,16 @@ set (LIBZINT_DEFINITIONS "")
 
 find_path (LIBZINT_INCLUDE_DIR NAMES zint.h)
 
-find_library (LIBZINT_LIBRARY NAMES zint )
+find_library (LIBZINT_LIBRARY NAMES zint)
+
+set (LIBZINT_INCLUDE_DIR "C:/Program Files (x86)/zint-package/include/")
+set (LIBZINT_LIBRARY "C:/Program Files (x86)/zint-package/lib/zint.lib")
+
+message(STATUS  "LIBZINT_INCLUDE_DIR=${LIBZINT_INCLUDE_DIR}")
+message(STATUS  "LIBZINT_LIBRARY=${LIBZINT_LIBRARY}")
 
 if (LIBZINT_LIBRARY AND LIBZINT_INCLUDE_DIR)
-  
+
   set (LIBZINT_INCLUDE_DIRS ${LIBZINT_INCLUDE_DIR})
   set (LIBZINT_LIBRARIES ${LIBZINT_LIBRARY})
   set (LIBZINT_DEFINITIONS "")

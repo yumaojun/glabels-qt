@@ -24,6 +24,13 @@ else ()
   set (OPTIONAL_ZINT "")
 endif ()
 
+if (${PNG_FOUND})
+  add_definitions (-DHAVE_PNG=1)
+  set (OPTIONAL_PNG PNG::PNG)
+else ()
+  set (OPTIONAL_PNG "")
+endif ()
+
 #=======================================
 # Sources
 #=======================================
@@ -62,6 +69,7 @@ target_link_libraries (Barcode
   glbarcode
   Qt5::Core
   ${OPTIONAL_GNUBARCODE}
+  ${OPTIONAL_PNG}
   ${OPTIONAL_ZINT}
   ${OPTIONAL_QRENCODE}
 )

@@ -124,6 +124,7 @@ endif ()
 # Optional dependencies
 #
 find_package (ZLIB 1.2 QUIET)
+find_package (PNG)
 find_package (GnuBarcode 0.98 QUIET)
 find_package (LibQrencode 3.4 QUIET)
 find_package (LibZint 2.6 EXACT QUIET)
@@ -184,6 +185,12 @@ if (ZLIB_FOUND)
 else (ZLIB_FOUND)
   message (STATUS "zlib (optional).......... No.")
 endif (ZLIB_FOUND)
+
+if(PNG_FOUND)
+    message(STATUS "PNG (optional)........... " ${PNG_VERSION_STRING})
+else(PNG_FOUND)
+    message(STATUS "PNG (optional)... No.")
+endif(PNG_FOUND)
 
 if (GNUBARCODE_FOUND)
   message (STATUS "GNU Barcode (optional)... " ${GNUBARCODE_VERSION_STRING})
