@@ -1,0 +1,25 @@
+<!DOCTYPE RCC>
+
+<RCC version="1.0">
+    <qresource>
+        <file>ui/grpAztec.ui</file>
+        <file>ui/grpC39.ui</file>
+        <file>ui/grpDM.ui</file>
+        <file>ui/grpMSICheck.ui</file>
+        <file>ui/grpC128.ui</file>
+        <file>ui/grpChannel.ui</file>
+        <file>ui/grpMicroPDF.ui</file>
+        <file>ui/grpMaxicode.ui</file>
+        <file>ui/grpPDF417.ui</file>
+        <file>ui/grpC16k.ui</file>
+        <file>ui/grpMQR.ui</file>
+        <file>ui/grpQR.ui</file>
+        <file>ui/grpCodeOne.ui</file>
+        <file>ui/grpC49.ui</file>
+        <file>ui/grpGrid.ui</file>
+        <file>ui/grpDBExtend.ui</file>
+        <file>ui/grpHX.ui</file>
+        <file>ui/grpDotCode.ui</file>
+        <file>ui/grpCodablockF.ui</file>
+    </qresource>
+</RCC>

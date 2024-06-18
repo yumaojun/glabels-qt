@@ -94,6 +94,7 @@ namespace glabels
 		void onTextControlsChanged();
 		void onTextInsertFieldKeySelected( QString key );
 		void onBarcodeControlsChanged();
+		void updatePreview();
 		void onBarcodeInsertFieldKeySelected( QString key );
 		void onResetImageSize();
 		void onShadowControlsChanged();
@@ -111,6 +112,8 @@ namespace glabels
 		model::Units             mUnits;
 		int                      mSpinDigits;
 		double                   mSpinStep;
+
+		QWidget* mOptionWidget{nullptr};
 	
 		QButtonGroup*            textHAlignGroup;
 		QButtonGroup*            textVAlignGroup;

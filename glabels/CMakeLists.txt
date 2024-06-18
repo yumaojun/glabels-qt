@@ -105,6 +105,7 @@ set (glabels_resource_files
   cursors.qrc
   icons.qrc
   images.qrc
+  resources.qrc
 )
 
 qt5_wrap_cpp (glabels_moc_sources ${glabels_qobject_headers})
@@ -138,6 +139,7 @@ target_include_directories (glabels-qt
 target_link_libraries (glabels-qt
   Model
   Qt5::Widgets
+  Qt5::UiTools
 )
 
 #=======================================

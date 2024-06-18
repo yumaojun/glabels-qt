@@ -40,6 +40,8 @@
 #include <QDir>
 #include <QtMath>
 #include <QtDebug>
+#include <QUiLoader>
+#include <QFile>
 
 
 namespace glabels
@@ -777,8 +779,162 @@ namespace glabels
 			mObject->setBcColorNode( barcodeColorButton->colorNode() );
 			mObject->setBcData( barcodeDataEdit->toPlainText() );
 
+			QUiLoader uiload;
+
+			if ( mOptionWidget )
+			{
+				notebook->removeTab( notebook->indexOf( mOptionWidget ) );
+			}
+
+			qDebug() << bcStyle.fullId();
+
+			if ( bcStyle.fullId() == "zint::aztec" )
+			{
+				QFile file( ":ui/grpAztec.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Aztec Code" ) );
+			}
+			/*else if ( bcStyle.fullId() == "zint::code128" )
+			{
+				QFile file( ":ui/grpChannel.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Code 128" ) );
+			}*/
+			/*else if ( bcStyle.fullId() == "zint::code128" )
+			{
+				QFile file( ":ui/grpCodablockF.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Code 128" ) );
+			}*/
+			else if ( bcStyle.fullId() == "zint::code1" )
+			{
+				QFile file( ":ui/grpCodeOne.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Code One" ) );
+			}
+			else if ( bcStyle.fullId() == "zint::c16k" )
+			{
+				QFile file( ":ui/grpC16k.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Code 16K" ) );
+			}
+			else if ( bcStyle.fullId() == "zint::code39" || bcStyle.fullId() == "zint::code39e" )
+			{
+				QFile file( ":ui/grpC39.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Code 39" ) );
+			}
+			else if ( bcStyle.fullId() == "zint::code49" )
+			{
+				QFile file( ":ui/grpC49.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Code 49" ) );
+			}
+			else if ( bcStyle.fullId() == "zint::dmtx" )
+			{
+				QFile file( ":ui/grpDM.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Data Matrix" ) );
+			}
+			else if ( bcStyle.fullId() == "zint::gmtx" )
+			{
+				QFile file( ":ui/grpGrid.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "Grid Matrix" ) );
+			}
+			else if ( bcStyle.fullId() == "zint::pdf" )
+			{
+				QFile file( ":ui/grpPDF417.ui" );
+				if ( !file.open( QIODevice::ReadOnly ) )
+					return;
+
+				mOptionWidget = uiload.load( &file );
+
+				file.close();
+				notebook->addTab( mOptionWidget, tr( "PDF417" ) );
+				connect(mOptionWidget->findChild<QObject*>("codewords"),  SIGNAL(valueChanged( int )), SLOT(updatePreview()));
+				connect(mOptionWidget->findChild<QObject*>("cmbPDFECC"), SIGNAL(currentIndexChanged( int )), SLOT(updatePreview()));
+				connect(mOptionWidget->findChild<QObject*>("cmbPDFCols"), SIGNAL(currentIndexChanged( int )), SLOT(updatePreview()));
+				connect(mOptionWidget->findChild<QObject*>("radPDFTruncated"), SIGNAL(clicked( bool )), SLOT(updatePreview()));
+				connect(mOptionWidget->findChild<QObject*>("radPDFStand"), SIGNAL(clicked( bool )), SLOT(updatePreview()));
+				connect(mOptionWidget->findChild<QObject*>("radPDFHIBC"), SIGNAL(clicked( bool )), SLOT(updatePreview()));
+			}
+
 			mBlocked = false;
 		}
+	}
+
+
+	void ObjectEditor::updatePreview() {
+		//if ( chkComposite->isChecked() == true )
+		//{
+		//	m_bc.bc.setPrimaryMessage( txtData->text() );
+		//	m_bc.bc.setText( txtComposite->toPlainText() );
+		//}
+		//else
+		//{
+		//	m_bc.bc.setText( txtData->text() );
+		//	/*m_bc.bc.setPrimaryMessage(txtComposite->text());*/
+		//}
+		//m_bc.bc.setSecurityLevel( 0 );
+		//m_bc.bc.setWidth( 0 );
+		//m_bc.bc.setInputMode( UNICODE_MODE );
+		//m_bc.bc.setHideText( 0 );
+		//if ( chkHRTHide->isChecked() == false )
+		//{
+		//	m_bc.bc.setHideText( 1 );
+		//}
+
+		barcode::Style bcStyle = barcodeStyleButton->bcStyle();
+		/*switch ( bcStyle.fullId() )
+		{
+		}*/
+
 	}
 
 
