@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>grpMSICheck</class>
- <widget class="QWidget" name="grpMSICheck">
+ <class>grpUPNQR</class>
+ <widget class="QWidget" name="grpUPNQR">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>295</width>
-    <height>79</height>
+    <width>400</width>
+    <height>227</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -18,7 +19,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="vLayoutMSI">
+  <layout class="QVBoxLayout" name="vLayoutUPNQR">
    <property name="contentMargins">
     <number>0</number>
    </property>
@@ -35,65 +36,68 @@
     <number>0</number>
    </property>
    <item>
-    <layout class="QHBoxLayout" name="hLayoutMSI">
-     <item>
-      <widget class="QLabel" name="lblMSICheck">
+    <layout class="QGridLayout" name="gridLayoutUPNQR">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelUPNQRMask">
        <property name="text">
-        <string>Chec&amp;k Digit:</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="buddy">
-        <cstring>cmbMSICheck</cstring>
+        <string>&amp;Mask:</string>
        </property>
        <property name="toolTip">
-        <string>Mod-10 uses Luhn algorithm
-Mod-11 (IBM) uses IBM weightings
-Mod-11 (NCR) uses NCR weightings</string>
+        <string>Manually specify which mask to use</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbUPNQRMask</cstring>
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QComboBox" name="cmbMSICheck">
+     <item row="0" column="1">
+      <widget class="QComboBox" name="cmbUPNQRMask">
        <property name="toolTip">
-        <string>Mod-10 uses Luhn algorithm
-Mod-11 (IBM) uses IBM weightings
-Mod-11 (NCR) uses NCR weightings</string>
+        <string>Manually specify which mask to use</string>
        </property>
        <item>
         <property name="text">
-         <string>None</string>
+         <string>Automatic</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Mod-10</string>
+         <string>0</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Mod-10 &amp; Mod-10</string>
+         <string>1</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Mod-11 (IBM)</string>
+         <string>2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Mod-11 (IBM) &amp; Mod-10</string>
+         <string>3</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Mod-11 (NCR)</string>
+         <string>4</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Mod-11 (NCR) &amp; Mod-10</string>
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
         </property>
        </item>
       </widget>
@@ -101,13 +105,13 @@ Mod-11 (NCR) uses NCR weightings</string>
     </layout>
    </item>
    <item>
-    <widget class="QCheckBox" name="chkMSICheckText">
+    <widget class="QCheckBox" name="chkUPNQRFast">
      <property name="text">
-      <string>Do not show check digit(s) in &amp;Text</string>
+      <string>&amp;Fast mode</string>
      </property>
      <property name="toolTip">
-      <string>Add check digit(s) but do not display
-in Human Readable Text</string>
+      <string>Only try four masks (0, 2, 4, 7) not eight
+when automatically selecting a mask</string>
      </property>
      <property name="checked">
       <bool>false</bool>

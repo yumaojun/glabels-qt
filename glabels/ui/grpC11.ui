@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>grpC39</class>
- <widget class="QWidget" name="grpC39">
+ <class>grpC11</class>
+ <widget class="QWidget" name="grpC11">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>254</width>
-    <height>131</height>
+    <width>400</width>
+    <height>227</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="vLayoutC39">
+  <layout class="QVBoxLayout" name="vLayoutC11">
    <property name="contentMargins">
     <number>0</number>
    </property>
@@ -36,21 +36,21 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QGroupBox" name="grpC39Check">
+    <widget class="QGroupBox" name="grpC11CheckDigits">
      <property name="title">
-      <string>Check Digit</string>
+      <string>Check Digits</string>
      </property>
      <property name="toolTip">
-      <string>Check character options</string>
+      <string>Check digits options</string>
      </property>
-     <layout class="QGridLayout" name="gridLayoutC39Check">
+     <layout class="QGridLayout" name="gridLayoutC11CheckDigits">
       <item row="0" column="0">
-       <widget class="QRadioButton" name="radC39Stand">
+       <widget class="QRadioButton" name="radC11TwoCheckDigits">
         <property name="text">
-         <string>No Ch&amp;eck Digit</string>
+         <string>&amp;Two (Mod-11)</string>
         </property>
         <property name="toolTip">
-         <string>Do not add check character</string>
+         <string>Add 2 mod-11 check digits</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -58,36 +58,22 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QRadioButton" name="radC39Check">
+       <widget class="QRadioButton" name="radC11OneCheckDigit">
         <property name="text">
-         <string>Mod-43 Chec&amp;k Digit</string>
+         <string>One (&amp;Mod-11)</string>
         </property>
         <property name="toolTip">
-         <string>Add mod-43 check character</string>
+         <string>Add 1 mod-11 check digit</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QRadioButton" name="radC39CheckHide">
+       <widget class="QRadioButton" name="radC11NoCheckDigits">
         <property name="text">
-         <string>&amp;Hidden Mod-43 Check Digit</string>
+         <string>No Ch&amp;eck Digit</string>
         </property>
         <property name="toolTip">
-         <string>Add mod-43 check character but
-do not display in Human Readable Text</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QRadioButton" name="radC39HIBC">
-        <property name="text">
-         <string>HIBC (&amp;Mod-43 Check Digit added)</string>
-        </property>
-        <property name="toolTip">
-         <string>Process data as a Health Industry Barcode (HIBC)
-Labeler Identification Code (LIC)
-For Provider Applications Standard (PAS), preface
-the data with a slash &quot;/&quot;</string>
+         <string>Do not add any check digits</string>
         </property>
        </widget>
       </item>

@@ -19,6 +19,7 @@ endif ()
 
 if (${LIBZINT_FOUND})
   add_definitions (-DHAVE_ZINT=1)
+  add_definitions (-DHAVE_ZINT=1 -DLIBZINT_VERSION=${LIBZINT_VERSION})
   set (OPTIONAL_ZINT ZINT::ZINT)
 else ()
   set (OPTIONAL_ZINT "")
@@ -69,7 +70,6 @@ target_link_libraries (Barcode
   glbarcode
   Qt5::Core
   ${OPTIONAL_GNUBARCODE}
-  ${OPTIONAL_PNG}
   ${OPTIONAL_ZINT}
   ${OPTIONAL_QRENCODE}
 )

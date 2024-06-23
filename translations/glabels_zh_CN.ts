@@ -2217,7 +2217,7 @@
     </message>
     <message>
         <source>Data Matrix</source>
-        <translation type="unfinished">IEC16022 (DataMatrix)</translation>
+        <translation type="unfinished">Data Matrix (ISO 16022) (and HIBC)</translation>
     </message>
     <message>
         <source>Deutsche Post Leitcode</source>
